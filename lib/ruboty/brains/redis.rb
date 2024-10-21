@@ -62,7 +62,7 @@ module Ruboty
       end
 
       def redis
-        ::Redis.new(url: url)
+        ::Redis.new(url: url, ssl_params: { verify_mode: OpenSSL::SSL::VERIFY_NONE })
       end
 
       def url
